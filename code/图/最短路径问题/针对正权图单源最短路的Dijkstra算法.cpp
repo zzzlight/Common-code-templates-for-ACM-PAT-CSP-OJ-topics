@@ -1,19 +1,20 @@
-void Dijkstra(int vstart,int vend){  
-    while(!visit[vend]){
-        int MIN=INT_MAX,v=-1;  
-        for(int i=0;i<N;++i){  
-            if(!visit[i]&&dis[i]<MIN){  
-                MIN=dis[i];  
-                v=i;  
-            }  
-        }  
-        if(v==-1)return;//v==-1表示是非连通图，直接返回  
-        visit[v]=true;//标记为已访问  
-        for(int i=0;i<graph[v].size();++i){  
-            int temp=graph[v][i].v;  
-            if(!visit[temp]&&dis[temp]>dis[v]+graph[v][i].length){  
-                dis[temp]=dis[v]+graph[v][i].length;//更新最短路径长度  
+typedef pair<int,int> pii;
+void Dijkstra(int s){
+    priority_queue<pii,vector<pii>,greater<pii>>pq;//pii的first成员存储dis，second成员存储结点编号
+    fill(dis,dis+MAX,INT_MAX);
+    dis[s]=0;
+    pq.push({0,s});
+    while(!pq.empty()){
+        pii p=pq.top();
+        pq.pop();
+        if(dis[p.second]!=p.first)
+            continue;
+        for(int i:graph[p.second]){
+            Edge&e=edges[i];
+            if(dis[e.to]>dis[p.second]+e.cost){
+                dis[e.to]=dis[p.second]+e.cost;
+                pq.push({dis[e.to],e.to});
             }
-        }  
-    }  
+        }
+    }
 }
