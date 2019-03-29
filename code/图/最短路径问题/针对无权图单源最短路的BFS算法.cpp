@@ -3,7 +3,6 @@ vector<int>graph[MAX];//graph[i][j]表示结点i能到达的第j个结点编号
 void BFS(int vstart){
     queue<int>q;
     memset(inQueue,0,sizeof(inQueue));
-    fill(dis,dis+MAX,INT_MAX);
     dis[vstart]=0;
     q.push(vstart);
     inQueue[vstart]=true;
