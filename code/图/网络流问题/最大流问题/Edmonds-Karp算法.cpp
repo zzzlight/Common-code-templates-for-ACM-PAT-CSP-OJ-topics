@@ -2,7 +2,7 @@ void insertEdge(int from,int to,int cap){//插入边
     graph[from].push_back(edges.size());
     edges.push_back(Edge(from,to,cap,0));
     graph[to].push_back(edges.size());
-    edges.push_back(Edge(from,to,0,0));
+    edges.push_back(Edge(to,from,0,0));
 }
 int a[MAX],p[MAX];//a数组表示源点到结点a[i]的残量,p数组表示最短路树上到达结点p[i]的边在edges数组中的序号
 int MaxFlow(int s,int t){//最大流算法,s为源点,t为汇点
