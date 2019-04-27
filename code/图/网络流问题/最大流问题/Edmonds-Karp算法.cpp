@@ -37,3 +37,4 @@ int MaxFlow(int s,int t){//最大流算法,s为源点,t为汇点
     }
     return flow;
 }
+//如果想要求解边上的流量，最好提前将边在edges数组中的编号存储起来，待Edmonds-Karp算法执行完毕后，通过编号访问edges数组对应元素的flow成员即可。
