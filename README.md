@@ -5,7 +5,6 @@
 
 本仓库所附的代码模板是我在刷题过程中总结的比较常用的代码，大部分代码是我自己编写的**基于C++11语法的C++接口**，所以比较符合我自己的代码风格，解释和注释也不是很多。建立这个仓库主要是做一下总结，以便自己以后使用，以后也会经常更新和修正。当然了，如果你觉得有些代码对你自己也有用处，也可以直接拿去使用，不过如果你不太习惯我的代码风格，使用起来可能会有些麻烦。如果有问题或者感觉我的代码中有bug，可以在`Issues`中留言哦ღ( ´･ᴗ･\` )比心
 ## 仓库目录
-## 仓库目录
 1. [高效算法](https://github.com/richenyunqi/Common-code-templates-for-ACM-PAT-CSP-OJ-topics/tree/master/code/%E9%AB%98%E6%95%88%E7%AE%97%E6%B3%95)
    1. [KMP算法.cpp](https://github.com/richenyunqi/Common-code-templates-for-ACM-PAT-CSP-OJ-topics/blob/master/code/%E9%AB%98%E6%95%88%E7%AE%97%E6%B3%95/KMP%E7%AE%97%E6%B3%95.cpp)
    2. [二分查找.cpp](https://github.com/richenyunqi/Common-code-templates-for-ACM-PAT-CSP-OJ-topics/blob/master/code/%E9%AB%98%E6%95%88%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.cpp)
